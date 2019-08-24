@@ -315,6 +315,7 @@ function init()
 end
 
 function start()
+    readSetting()
     if turtle.getFuelLevel() <= 100 then
         print("Please refuel")
     else
