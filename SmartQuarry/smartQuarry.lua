@@ -315,6 +315,7 @@ function init()
 end
 
 function start()
+    readSetting()
     if turtle.getFuelLevel() <= 100 then
         print("Please refuel")
     else
@@ -325,7 +326,7 @@ function start()
 end
 
 function readSetting()
-    local file = fs.readFile("/setting", "r")
+    local file = fs.open("/setting", "r")
     if file ~= nil then
         size = tonumber(file.readLine())
         skip = tonumber(file.readLine())
