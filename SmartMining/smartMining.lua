@@ -4,6 +4,7 @@ function digMainTunnel()
     for i=1,length do
         if moveForward(1) then
             digged = digged + 1
+            checkSides()
             if digged == 3 then
                 digSideTunnels()
                 digged = 0
