@@ -334,11 +334,11 @@ function readSetting()
         posY = tonumber(file.readLine())
         posZ = tonumber(file.readLine())
         posR = tonumber(file.readLine()) 
+        file.close()
     else
         size = 10
         skip = 0
     end
-    file.close()
 end
 
 function clean()
